@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/ico" sizes="96x96" href="/res/images/favicon.ico?"> 
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a878311718.js" crossorigin="anonymous"></script>  
+    <style>
+        main {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        img {
+            margin-top: 15vh;
+            width: 15vw;
+        }
+        h1 {
+            margin-top: 1vw;
+            font-size: 2.5vw;
+        }
+        h5 {
+            margin-top: 2vw;
+            font-size: 1.1vw;
+        }
+
+        @media (max-width: 900px) {
+            .thx {
+                position: absolute;
+                top:40%;
+                transform: translateY(-50%);
+            }
+            img {
+                width: 20vw;
+            }
+
+            h1 {
+                margin-top: 1.5vw;
+                font-size: 3.5vw;
+            }
+
+            h5 {
+                margin-top: 3vw;
+                font-size: 2vw;
+            }
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 0;
+            }
+            img {
+                width: 40vw;
+            }
+
+            h1 {
+                margin-top: 2vw;
+                font-size: 6vw;
+            }
+
+            h5 {
+                margin-top: 5vw;
+                font-size: 3vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <p id="schoolNameTopLeft">LSTHS</p>
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="menu-options">
+                <li><a href="./">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/staff">Staff</a></li>
+                <li><a href="/students">Students</a></li>
+                <li><a href="/contact">Contacts</a></li>
+            </ul>
+            <p><a href="/404" class="enroll">Enroll</a></p>
+        </nav>
+    </header>
+    <main>
+        <div class="thx">
+            <img src="/res/images/LSTHS_Logo.png" alt="LSTHS Logo">
+            <h1>Thank You for Enrolling to <br>Labo Science and Technology High School!</h1>
+            <h5>You're All Set! You'll recieve an email containing details and instructions about your enrollment once we've checked your submission.</h2>    
+        </div>
+    </main>
+</body>
+</html>

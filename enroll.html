@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSTHS Enrollment Form SY:2024-2025</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/ico" sizes="96x96" href="/res/images/favicon.ico?"> 
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a878311718.js" crossorigin="anonymous"></script>  
+    <link rel="stylesheet" href="https://use.typekit.net/kjw7oae.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <p id="schoolNameTopLeft">LSTHS</p>
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="menu-options">
+                <li><a href="./">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/staff">Staff</a></li>
+                <li><a href="/students">Students</a></li>
+                <li><a href="/contact">Contacts</a></li>
+            </ul>
+            <p><a href="/404" class="enroll">Enroll</a></p>
+        </nav>
+    </header>
+    <main>
+        <!--<h1 style="display: flex; justify-content: center; align-items: center; text-align: center; height: 80vh;">This Page is in Development <br> Not Available Until Further Notice</h1> -->
+        
+        <form action="https://formsubmit.co/8aa118b819eaf8d72f394094d85c85fb" method="POST" id="enrollmentForm" class="enrollmentForm" onsubmit="submitForm(event)">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="/thankyou">
+            <img src="/res/images/DepEd_Logo.png" class="DepEd-logo-form">
+            <h1 class="title-form">Basic Education Enrollment Form</h1>
+            <div class="row1">
+                <h2 style="margin-top: 6vw; margin-bottom: .5vw;">School Year: 2024 - 2025</h2>
+                <label for="gradeLevelEnrollTo" class="gradeLevelEnrollTo">Grade Level to Enroll: </label>
+                <select name="Enrolling to Grade" id="gradeLevelEnrollTo" class="gradeLevelEnrollTo">
+                    <option value="" disabled selected hidden></option>
+                    <option value="grade7">7</option>
+                    <option value="grade8">8</option>
+                    <option value="grade9">9</option>
+                    <option value="grade10">10</option>
+                    <option value="grade11">11</option>
+                    <option value="grade12">12</option>
+                </select>
+
+                <div class="LRN_Returning">
+                    <p style="margin-bottom: 10px;">Check the appropriate box only</p>
+                    <div class="questions">
+                        <div class="question">
+                            <p>1. With LRN?</p>
+                            <div class="options">
+                                <input type="radio" name="Currently Has LRN" id="LRNYes" value="Yes" class="radioButton" required>
+                                <label for="LRNYes">Yes</label>
+                                <input type="radio" name="Currently Has LRN" id="LRNNo" value="No" class="radioButton" required>
+                                <label for="LRNNo">No</label>
+                            </div>
+                        </div>
+                        
+                        <div class="question">
+                            <p>2. Returning(Balik-Aral)</p>
+                            <div class="options">
+                                <input type="radio" name="Balik-Aral" id="returningYes" value="Yes" class="radioButton"required>
+                                <label for="returningYes">Yes</label>
+                                <input type="radio" name="Balik-Aral" id="returningNo" value="No" class="radioButton" required>
+                                <label for="returningNo">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>            
+            <div class="form">
+                <div class="learnerInfo">
+                    <h2 class="sub-title">LEARNER INFORMATION</h2>
+                    <div class="questionRow">
+                        <div class="question">
+                            <label for="lrn">Learner Reference No.</label><br>
+                            <input type="text" name="Learner Reference Number" id="lrn" value="" required>
+                        </div>
+                        <div class="question">
+                            <label for="PSABirthCirtificate#">PSA Birth Certificate No. (if available upon registration)</label>
+                            <input type="text" name="PSA BirthCirtificate Number" id="PSABirthCirtificate#" value="">
+                        </div>
+                    </div>
+                    <div class="questionRow">
+                        <div class="question">
+                            <label for="LastName">Last Name</label><br>
+                            <input type="text" name="Last Name" id="LastName" value="" required>
+                        </div>
+                        <div class="question">
+                            <label for="FirstName">First Name</label><br>
+                            <input type="text" name="First Name" id="FirstName" value="" required>
+                        </div>
+                        <div class="question">
+                            <label for="MiddleName">Middle Name</label><br>
+                            <input type="text" name="Middle Name" id="MiddleName" value="">
+                        </div>
+                        <div class="question">
+                            <label for="suffix">Suffix</label><br>
+                            <select name="Suffix" id="suffix">
+                                <option value="N/A" selected></option>
+                                <option value="Jr.">Jr.</option>
+                                <option value="Sr.">Sr.</option>
+                                <option value="I">I</option>
+                                <option value="II">II</option>
+                                <option value="III">III</option>
+                                <option value="IV">IV</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="questionRow">
+                        <div class="question">
+                            <label for="sex">Sex</label>  
+                            <select name="Sexuality" id="sex" required>
+                                <option value="" disabled selected hidden></option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class="question">
+                            <label for="age">Age</label>
+                            <input type="text" name="Age" id="age" value="" required>
+                        </div>
+                        <div class="question">
+                            <label for="birthdate">Birthdate</label>
+                            <input type="date" name="Birthdate" id="birthdate" value="" required>
+                        </div>
+                        <div class="question">
+                            <label for="birthplace">Birthplace</label>
+                            <input type="text" name="Birthplace" id="birthplace" value="" required>
+                        </div>                    
+                    </div>
+                    <div class="questionRow">
+                        <div class="question">
+                            <label for="motherTounge">Mother Tounge</label>
+                            <input type="text" name="Mother Tounge" id="motherTounge" value="" required>
+                        </div>
+                        <div class="question">
+                            <label for="studentEmail">Students or Guardians Email</label>
+                            <input type="email" name="Email" id="studentEmail" value="" required>
+                        </div>
+                    </div>
+                    <div class="questionRow">
+                        <div class="question">
+                            <p>Belonging to any Indigenous Peoples (IP) Community/Indigenous Cultural Community?</p>
+                            <input type="radio" name="Belonging to any Indigenous Peoples" id="IPYes" value="Yes" class="radioButton" onclick="showFollowUp('IPYes', 'followupQuestion1')" required>
+                            <label for="IPYes">Yes</label>
+                            <input type="radio" name="Belonging to any Indigenous Peoples" id="IPNo" value="No" class="radioButton" onclick="hideFollowUp('followupQuestion1')" required>
+                            <label for="IPNo">No</label>
+                            <div class="hidden followupQuestion1" style="display: none;">
+                              <label for="IPspecify">Please Specify:</label>
+                              <input type="text" name="IP specify" id="IPspecify" value="">
+                            </div>
+                          </div>
+                          
+                          <div class="question">
+                            <p>Is your family a beneficiary of 4Ps?</p>
+                            <input type="radio" name="4Ps Beneficiary" id="4PsYes" value="Yes" class="radioButton" onclick="showFollowUp('4PsYes', 'followupQuestion2')" required>
+                            <label for="4PsYes">Yes</label>
+                            <input type="radio" name="4Ps Beneficiary" id="4PsNo" value="No" class="radioButton" onclick="hideFollowUp('followupQuestion2')" required>
+                            <label for="4PsNo">No</label>
+                            <div class="hidden followupQuestion2" style="display: none;">
+                              <label for="4PsSpecify">Write the 4Ps Household ID Number below</label>
+                              <input type="text" name="4Ps Specify" id="4PsSpecify" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="learnerInfo_row6">
+                        <p>Is the child a Learner with Disability?</p>
+                        <input type="radio" name="Disabled" id="disabledYes" value="Yes" class="radioButton" onclick="showFollowUp('disabledYes', 'followupQuestion3')" required>
+                        <label for="disabledYes">Yes</label>
+                        <input type="radio" name="Disabled" id="disabledNo" value="No" class="radioButton" onclick="hideFollowUp('followupQuestion3')" required>
+                        <label for="disabledNo">No</label>
+                        <div class="followupQuestion3" style="display: none; margin-top: 1.5vw;">
+                            <p style="margin-bottom: -.7vw;">Please Specify:</p>
+                            <div class="questionColumns">
+                                <div class="questionColumn">
+                                  <div class="question">
+                                      <input type="checkbox" name="disability" class="radioButton" id="visualImpairment" value="visualImpairment">
+                                      <label for="visualImpairment">Visual Impairment</label><br>
+                                  </div>
+                                  <div class="question" style="margin-left: 3vw;">
+                                      <input type="radio" name="visualImpairment" class="radioButton" id="a-blind" value="a-blind">
+                                      <label for="a-blind">a. Blind</label><br>
+                                  </div>
+                                  <div class="question" style="margin-left: 3vw;">
+                                      <input type="radio" name="visualImpairment" class="radioButton" id="b-lowVision" value="b-lowVision">
+                                      <label for="b-lowVision">b. Low Vision</label><br>
+                                  </div>
+                                  <div class="question">
+                                      <input type="checkbox" name="disability" class="radioButton" id="multipleDisorder" value="multipleDisorder">
+                                      <label for="multipleDisorder">Multiple Disorder</label><br>
+                                  </div>
+                                  
+                              </div>
+                              <div class="questionColumn">
+                                  <div class="question">
+                                      <input type="checkbox" name="disability" class="radioButton" id="hearingImpairment" value="hearingImpairment">
+                                      <label for="hearingImpairment">Hearing Impairment</label><br>
+                                  </div>
+                                  <div class="question">
+                                      <input type="checkbox" name="disability" class="radioButton" id="autismSpectrumDisorder" value="autismSpectrumDisorder">
+                                      <label for="autismSpectrumDisorder">Autism Spectrum Disorder</label><br>
+                                  </div>
+                                  <div class="question">
+                                      <input type="checkbox" name="disability" class="radioButton" id="speech-languageDisorder" value="speech-languageDisorder">
+                                      <label for="speech-languageDisorder">Speech/Language Disorder</label><br>
+                                  </div>
+                              </div>
+                              <div class="questionColumn">
+                                  <div class="question">
+                                      <input type="checkbox" name="disability" class="radioButton" id="learningDisability" value="learningDisability">
+                                      <label for="learningDisability">Learning Disability</label><br>
+                                  </div>
+                                  <div class="question">
+                                      <input type="checkbox" name="disability" class="radioButton" id="emotinal-behaviorDisorder" value="emotinal-behaviorDisorder">
+                                      <label for="emotinal-behaviorDisorder">Emotinal/Behavioral Disorder</label><br>
+                                  </div>
+                                  <div class="question">
+                                      <input type="checkbox" name="disability" class="radioButton" id="cerebralPalsy" value="cerebralPalsy">
+                                      <label for="cerebralPalsy">Cerebral Palsy</label><br>                                
+                                  </div>
+                                  
+                              </div>
+                              <div class="questionColumn">
+                                  <div class="question">
+                                      <input type="checkbox" name="disability" class="radioButton" id="intellectualDisability" value="intellectualDisability">   
+                                      <label for="intellectualDisability">Intellectual Disability</label><br>
+                                  </div>
+                                  <div class="question">
+                                      <input type="checkbox" name="disability" class="radioButton" id="orthopedic-physicalHandicap" value="orthopedic-physicalHandicap">
+                                      <label for="orthopedic-physicalHandicap">Orthopedic/Physical Handicap</label><br>
+                                  </div>
+                                  <div class="question">
+                                      <input type="checkbox" name="disability" class="radioButton" id="specialHealthProblem-chronicDisease" value="specialHealthProblem-chronicDisease">
+                                      <label for="specialHealthProblem-chronicDisease">Special Health Problem/Chronic Disease</label>
+                                  </div>
+                                  <div class="question" style="margin-left: 3vw;">
+                                      <input type="radio" name="specialHealthProblem-chronicDisease" class="radioButton" id="a-cancer" value="a-cancer">
+                                      <label for="a-caner">a. Cancer</label>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="currentAdress" style="margin-top: 2vw;">
+                        <h2 class="sub-title" style="text-align: left; font-size: 20px; text-indent: 20px;">Current Adress</h2>
+                        <div class="questionRow">
+                            <div class="question">
+                                <label for="house#">House No.</label>
+                                <input type="text" name="Current House Number" id="house#" value="">
+                            </div>
+                            <div class="question">
+                                <label for="st-Name">Street Name</label>
+                                <input type="text" name="Current Street Name" id="st-Name" value="" required>
+                            </div>
+                            <div class="question">
+                                <label for="brgy">Barangay</label>
+                                <input type="text" name="Current Barangay" id="brgy" value="" required>
+                            </div>
+                        </div>
+                        <div class="questionRow">
+                            <div class="question">
+                                <label for="municipal-city">Municipal/City</label>
+                                <input type="text" name="Current Municipal/City" id="municipal-city" value="" required>
+                            </div>
+                            <div class="question">
+                                <label for="province">Province</label>
+                                <input type="text" name="Current Province" id="province" value="" required>
+                            </div>
+                            <div class="question">
+                                <label for="country">Country</label>
+                                <input type="text" name="Current Country" id="country" value="" required>
+                            </div>
+                            <div class="question">
+                                <label for="zipCode">Zip Code</label>
+                                <input type="text" name="Current Zip Code" id="zipCode" value="" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="permanentAdress" style="margin-top: 2vw;">
+                        <h2 style="text-align: left; font-size: 20px; text-indent: 20px;" class="sub-title">Permanent Adress</h2>
+                        <span id="address-radio-group">
+                            <p>Same with your current address?</p>
+                            <input type="radio" name="Same With Current Adress" id="sameWithCurrentAddressYes" class="radioButton" value="Yes">
+                            <label for="sameWithCurrentAddressYes">Yes</label>
+                            <input type="radio" name="Same With Current Adress" id="sameWithCurrentAddressNo" class="radioButton" value="No">
+                            <label for="sameWithCurrentAddressNo">No</label>
+                        </span>
+                        <div class="questionRow">
+                            <div class="question">
+                                <label for="Phouse#">House No.</label>
+                                <input type="text" name="Permenent House Number" id="Phouse#" value="">
+                            </div>
+                            <div class="question">
+                                <label for="Pst-Name">Street Name</label>
+                                <input type="text" name="Permenent Street Name" id="Pst-Name" value="" required>
+                            </div>
+                            <div class="question">
+                                <label for="Pbrgy">Barangay</label>
+                                <input type="text" name="Permenent Barangay" id="Pbrgy" value="" required>
+                            </div>
+                        </div>
+                        <div class="questionRow">
+                            <div class="question">
+                                <label for="Pmunicipal-city">Municipal/City</label>
+                                <input type="text" name="Permenent Municipal/City" id="Pmunicipal-city" value="" required>
+                            </div>
+                            <div class="question">
+                                <label for="Pprovince">Province</label>
+                                <input type="text" name="Permenent Province" id="Pprovince" value="" required>
+                            </div>
+                            <div class="question">
+                                <label for="Pcountry">Country</label>
+                                <input type="text" name="Permenent Country" id="Pcountry" value="" required>
+                            </div>
+                            <div class="question">
+                                <label for="PzipCode">Zip Code</label>
+                                <input type="text" name="Permenent ZipCode" id="PzipCode" value="" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="parent-guardianInfo" style="margin-top: 3vw;">
+                    <h2>PARENT'S/GUARDIAN'S INFORMATION</h2>
+                    <h3 style="margin-bottom: -1vw;">Father's Name</h3>
+                    <div class="questionRow">
+                        <div class="question">
+                            <label for="FatherLastName">Last Name</label><br>
+                            <input type="text" name="Father Last Name" id="FatherLastName" value="">
+                        </div>
+                        <div class="question">
+                            <label for="FatherFirstName">First Name</label><br>
+                            <input type="text" name="Father First Name" id="FatherFirstName" value="">
+                        </div>
+                        <div class="question">
+                            <label for="FatherMiddleName">Middle Name</label><br>
+                            <input type="text" name="Father Middle Name" id="FatherMiddleName" value="">
+                        </div>
+                        <div class="question">
+                            <label for="FatherCellphone#">Cellphone No.</label>
+                            <input type="text" name="Father Cellphone Number" id="FatherCellphone#" value="">
+                        </div>
+                    </div>
+                    <h3 style="margin-bottom: -1vw;">Mother's Maiden Name</h3>
+                    <div class="questionRow">
+                        <div class="question">
+                            <label for="MotherLastName">Last Name</label><br>
+                            <input type="text" name="Mother Last Name" id="MotherLastName" value="">
+                        </div>
+                        <div class="question">
+                            <label for="MotherFirstName">First Name</label><br>
+                            <input type="text" name="Mother First Name" id="MotherFirstName" value="">
+                        </div>
+                        <div class="question">
+                            <label for="MotherMiddleName">Middle Name</label><br>
+                            <input type="text" name="Mother Middle Name" id="MotherMiddleName" value="">
+                        </div>
+                        <div class="question">
+                            <label for="MotherCellphone#">Cellphone No.</label>
+                            <input type="text" name="Mother Cellphone Number" id="MotherCellphone#" value="">
+                        </div>
+                    </div>
+                    <h3 style="margin-bottom: -1vw;">Legal Guradian's Name</h3>
+                    <div class="questionRow">
+                        <div class="question">
+                            <label for="GuardianLastName">Last Name</label><br>
+                            <input type="text" name="Guardian Last Name" id="GuardianLastName" value="">
+                        </div>
+                        <div class="question">
+                            <label for="GuardianFirstName">First Name</label><br>
+                            <input type="text" name="Guardian First Name" id="GuardianFirstName" value="">
+                        </div>
+                        <div class="question">
+                            <label for="GuardianMiddleName">Middle Name</label><br>
+                            <input type="text" name="Guardian Middle Name" id="GuardianMiddleName" value="">
+                        </div>
+                        <div class="question">
+                            <label for="GuardianCellphone#">Cellphone No.</label>
+                            <input type="text" name="Guardian Cellphone Number" id="GuardianCellphone#" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="returningStudents" style="display: block; margin-top: 3vw;" >
+                    <h2 style="margin-bottom: 2vw;">For Returning Learner (Balik-Aral) and Those Who will Transfer/Move In</h2>
+                    <div class="questionRow">
+                        <div class="question">
+                            <label for="lastGradeLevelAttended">Last Grade Level Completed</label>
+                            <select name="Last Grade Level Attended" id="lastGradeLevelAttended">
+                                <option value="" disabled selected></option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </div>
+                        <div class="question">
+                            <label for="lastSchoolYearCompleted">Last School Year Completed</label>
+                            <input type="text" name="Last School Year Completed" id="lastSchoolYearCompleted" value="">
+                        </div>
+                    </div>
+                    <div class="questionRow">
+                        <div class="question">
+                            <label for="lastSchoolAttended">Last School Attended</label>
+                            <input type="text" name="Last School Attended" id="lastSchoolAttended" value="">
+                        </div>
+                        <div class="question">
+                            <label for="schoolID">School ID</label>
+                            <input type="text" name="schoolID" id="schoolID" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="seniorHighSchool">
+                    <h2 style="margin-top: 2vw; margin-bottom: 1vw;">For Senior High School</h2>
+                    <p>Semester</p>
+                    <input type="radio" name="Semester" class="radioButton" id="semester1" value="1">
+                    <label for="semester1">1st</label>
+                    <input type="radio" name="Semester" class="radioButton" id="semester2" value="2">
+                    <label for="semester2">2nd</label>
+                    <div class="questionRow">
+                        <div class="question">
+                            <label for="track">Track</label>
+                            <input type="text" name="Track" id="track" value="">
+                        </div>
+                        <div class="question">
+                            <label for="strand">Strand</label>
+                            <input type="text" name="Strand" id="strand" value="">
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 5vw; margin-bottom: 7vw; display: flex; justify-content: center;">
+                    <p style="text-align: center; text-overflow:clip; width: 98%;">
+                        I hereby certify that the above information given are true and correct o the best of my knowledge and I allow the
+                        Department of Education to use my child's details to create and/or update his/her learner profile in the Learner Information System.
+                        The information herein shall be treated as confidential in compliance with the Data Privacy Act of 2012.
+                    </p>
+                </div>
+            </div>
+            <button type="submit" class="enrollSubmit">ENROLL</button>
+        </form>
+    </main>
+    <footer>
+        <script src="/script.js"></script>
+        <!--<script>
+            function submitForm(e) {
+              e.preventDefault();
+              html2canvas(document.getElementById("enrollmentForm")).then(function(canvas) {
+                var img = canvas.toDataURL("image/jpg");
+                var a = document.createElement('a');
+                a.href = img;
+                a.download = 'form_image.png';
+                a.click();
+              });
+            }
+          </script>-->
+          <script>
+            // Function to reset input to "N/A" if blank
+            function resetToDefault(input) {
+                if (input.value.trim() === '') {
+                    input.value = 'N/A';
+                }
+            }
+    
+            // Get all input elements
+            const inputs = document.querySelectorAll('input[type="text"]:not([required])');
+    
+            // Attach event listeners to each non-required input
+            inputs.forEach(input => {
+                input.addEventListener('blur', function() {
+                    resetToDefault(input);
+                });
+            });
+        </script>
+    </footer>
+</body>
