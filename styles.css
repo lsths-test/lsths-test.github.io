@@ -526,6 +526,10 @@ h2{
     grid-template-columns: repeat(5, 1fr);
 }
 
+.staffGroup.TLE{
+    grid-template-columns: repeat(6, 1fr);
+}
+
 .staffGroup.NTS2{
     width: 300%;
     grid-template-columns: 1fr;
