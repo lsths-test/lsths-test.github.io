@@ -6,8 +6,6 @@ menuBtn.onclick = () => {
 };
 
 function populateData(data) {
-  // Convert special characters like &ntilde; to their respective characters
-
   const rows = data.split('\n');
   const maleData = [];
   const femaleData = [];
@@ -33,7 +31,7 @@ function populateData(data) {
   });
 
   // Populate the table
-  
+
   const tbody = document.querySelector('#studentsTable tbody');
   const maxRows = Math.max(maleData.length, femaleData.length);
   for (let i = 0; i < maxRows; i++) {
@@ -44,19 +42,26 @@ function populateData(data) {
       if (maleData[i]) {
           maleTd.innerText = `${i + 1}. ${maleData[i].originalName.toUpperCase()}`;
           updateCard(`student${i * 2 + 1}-card`, maleData[i].cardName, maleData[i].birthdate);
+          
+          // Add click event listener only if the name is not blank
+          if (maleData[i].originalName.trim()) {
+              maleTd.addEventListener('click', () => showCard(`student${i * 2 + 1}-card`));
+          }
       }
+
       if (femaleData[i]) {
           femaleTd.innerText = `${i + 1}. ${femaleData[i].originalName.toUpperCase()}`;
           updateCard(`student${i * 2 + 2}-card`, femaleData[i].cardName, femaleData[i].birthdate);
+          
+          // Add click event listener only if the name is not blank
+          if (femaleData[i].originalName.trim()) {
+              femaleTd.addEventListener('click', () => showCard(`student${i * 2 + 2}-card`));
+          }
       }
 
       tr.appendChild(maleTd);
       tr.appendChild(femaleTd);
       tbody.appendChild(tr);
-
-      // Add click event listeners to table cells
-      maleTd.addEventListener('click', () => showCard(`student${i * 2 + 1}-card`));
-      femaleTd.addEventListener('click', () => showCard(`student${i * 2 + 2}-card`));
   }
 }
 
@@ -78,13 +83,18 @@ function formatNameForCard(name) {
   // Assuming the format "Lastname, Firstname, Othername"
   const parts = name.split(', ');
   if (parts.length >= 2) {
-      const firstname = parts[1];
-      const lastname = parts[0];
-      const othername = parts.slice(2).join(' ');
-      return `${firstname} ${othername.charAt(0)}. ${lastname}`;
+    const firstname = parts[1];
+    const lastname = parts[0];
+    const othername = parts.slice(2).join(' ').trim(); // Join and trim to remove extra spaces
+
+    // Add initial and dot only if othername is not empty
+    const othernameInitial = othername ? `${othername.charAt(0)}. ` : '';
+
+    return `${firstname} ${othernameInitial}${lastname}`;
   }
   return name; // Return original if format doesn't match
 }
+
 
 // Function to show a specific card and hide others
 function showCard(cardId) {

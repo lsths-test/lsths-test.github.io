@@ -9,6 +9,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a878311718.js" crossorigin="anonymous"></script>  
     <link rel="stylesheet" href="https://use.typekit.net/kjw7oae.css">  
+    <style>
+        main{
+            margin-left: 1vw;
+            margin-right: 1vw;
+        }
+
+        .departments {
+            margin-top: 8vw;
+        }
+
+        @media (max-width: 900px) {
+            .departments{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .departments > div:nth-child(1) { order: 8; }
+            .departments > div:nth-child(2) { order: 1; }
+            .departments > div:nth-child(3) { order: 2; }
+            .departments > div:nth-child(4) { order: 3; }
+            .departments > div:nth-child(5) { order: 4; }
+            .departments > div:nth-child(6) { order: 9; }
+            .departments > div:nth-child(7) { order: 5; }
+            .departments > div:nth-child(8) { order: 6; }
+            .departments > div:nth-child(9) { order: 7; }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -24,187 +50,277 @@
                 <li><a href="/students">Students</a></li>
                 <li><a href="/contact">Contacts</a></li>
             </ul>
-            <p><a href="/404" class="enroll">Enroll</a></p>
+            <!--<p><a href="/404" class="enroll">Enroll</a></p>-->
         </nav>
     </header>
     <main>
-        <h1 class="notAvailable">This Page is in Development <br> Not Available Until Further Notice</h1>
-        <!--
+        <!-- <h1 class="notAvailable">This Page is in Development <br> Not Available Until Further Notice</h1> -->
         <h1 style="text-align: center; margin-top: -1vw; font-size: 4.5vw;">FACULTY AND STAFF</h1>
         <h3 style="text-align: center; margin-top: -2vw; margin-bottom: 2vw; font-size: 2.5vw;">SY: 2024 - 2025</h3>
         <div class="principal">
             <img src="/res/images/Staff/EUGENIO M. ABANTO.png" style="width: 24vw;">
-            <h2 style="font-size: 2vw;">EUGENIO M. ABANTO</h2>
-            <p style="font-family: 'Courier New', Courier, monospace; font-size: 1.5vw; margin-bottom: -5vw;">School Principal I</p>
+            <p class="principalName">EUGENIO M. ABANTO</p>
+            <p class="principalRole">School Principal I</p>
         </div>
-        <div class="department">
-            <h2>ARALING PANLIPUNAN DEPARTMENT</p>
-            <span class="teacher">
-                <img src="/res/images/Staff/APRIL JOY V. ELLA.png">
-                <p>APRIL JOY V. ELLA</p>
-            </span>
-            <span class="teacher">
-                <img src="/res/images/Staff/CINDY D. LOPEZ.jpg">
-                <p>CINDY D. LOPEZ</p>
-            </span>
-            <span class="teacher">
-                <img src="/res/images/Staff/JORGE H. SANCHEZ.jpg">
-                <p>JORGE H. SANCHEZ</p>
-            </span>
-            <span class="teacher" style="position: relative; bottom: -2.5vw;">
-                <img src="/res/images/Staff/KRIZZA MAE T. VILLALUNA.jpg">
-                <p>KRIZZA MAE T. VILLALUNA</p>
-            </span>
-            <span class="teacher">
-                <img src="/res/images/Staff/SARA A. VITE.jpg" style="width: 17.6vw;">
-                <p>SARA A. VITE</p>
-            </span>
-        </div>
-        <div class="department">
-            <h2>ENGLISH DEPARTMENT</h2>
-            <span class="teacher" style="position: relative; bottom: -2.5vw;">
-                <img src="/res/images/Staff/CECILE F. BUSTAMANTE.jpg">
-                <p>CECILE F. BUSTAMANTE</p>
-            </span>
-            <span class="teacher" style="position: relative; bottom: -2.5vw;">
-                <img src="/res/images/Staff/JACQUELINE V. CERENO.png">
-                <p>JACQUELINE V. CERENO</p>
-            </span>
-            <span class="teacher">
-                <img src="/res/images/Staff/LUDYLIN T. BARDON.jpg">
-                <p>LUDYLIN T. BARDON</p>
-            </span>
-            <span class="teacher">
-                <img src="/res/images/Staff/MARIBEL O. BRIÑAS.jpg" style="width: 17.6vw;">
-                <p>MARIBEL O. BRI&Ntilde;AS</p>
-            </span>
-            <span class="teacher">
-                <img src="/res/images/Staff/MELODY O. RASCO.jpg" style="width: 17.6vw;">
-                <p>MELODY O. RASCO</p>
-            </span>
-        </div>
-        <div class="department">
-            <h2>FILIPINO DEPARTMENT</h2>
-            <span class="teacher">
-                <img src="/res/images/Staff/GARY M. SAYNO.jpg">
-                <p>GARY M. SAYNO</p>
-            </span>
-            <span class="teacher">
-                <img src="/res/images/Staff/HELEN C. ALBAÑO.jpg">
-                <p>HELEN C. ALBA&Ntilde;O</p>
-            </span>
-            <span class="teacher">
-                <img src="/res/images/Staff/LEA B. VILLACRUEL.jpg">
-                <p>LEA B. VILLACRUEL</p>
-            </span>
-            <span class="teacher">
-                <img src="/res/images/Staff/LEO M. GAJERO.png">
-                <p>LEO M. GAJERO</p>
-            </span>
-        </div>
-        <div class="department">
-            <h2>MATHEMATICS DEPARTMENT</h2>
-            <span class="teacher">
-                <img src="/res/images/Staff/KRIEZL L. NARVAEZ.jpg">
-                <p>KRIEZL L. NARVAEZ</p>
-            </span>
-            <span class="teacher">
-                <img src="/res/images/Staff/LAARNI N. SAMAN.jpg">
-                <p>LAARNI N. SAMAN</p>
-            </span>
-            <span class="teacher">
-                <img src="/res/images/Staff/LINDA B. JAMITO.jpg">
-                <p>LINDA B. JAMITO</p>
-            </span>
-            <span class="teacher" style="position: relative; bottom: -2.5vw;">
-                <img src="/res/images/Staff/MARICEL M. TINDOGAN.png">
-                <p>MARICEL M. TINDOGAN</p>
-            </span>
-            <span class="teacher">
-                <img src="/res/images/Staff/NELSON B. RACASA.jpg">
-                <p>NELSON B. RACASA</p>
-            </span>
-        </div>
-        <div class="department">
-            <h2>MAPEH DEPARTMENT</h2>
-            <span class="teacher">
-                <img src="/res/images/Staff/CRIS JOHN G. VILLAFUERTE.jpg">
-                <p>CRIS JOHN G. VILLAFUERTE</p>
-            </span>
-            <span class="teacher">
-                <img src="/res/images/Staff/EDWARD MARI G. GERIO.jpg">
-                <p>EDWARD MARI G. GERIO</p>
-            </span>
-            <span class="teacher">
-                <img src="/res/images/Staff/MARJORIE G. ZANTUA.jpg">
-                <p>MARJORIE G. ZANTUA</p>
-            </span>
-            <span class="teacher">
-                <img src="/res/images/Staff/JONA GRACE S. RAMIREZ.jpg">
-                <p>JONA GRACE S. RAMIREZ</p>
-            </span>
-        </div>
-        <div class="department">
-            <h2>SCIENCE DEPARTMENT</h2>
-            <span class="teacher" style="margin-left: 3vw; margin-right: 3vw;">
-                <img src="/res/images/Staff/EIMEREN B. BASTO.jpg">
-                <p>EIMEREN B. BASTO</p>
-            </span>
-            <span class="teacher" style="margin-left: 3vw; margin-right: 3vw;">
-                <img src="/res/images/Staff/ENIRISA B. PALIVINO.jpg" style="width: 16.2vw;">
-                <p>ENIRISA B. PALIVINO</p>
-            </span>
-            <span class="teacher" style="position: relative; bottom: -2.5vw; margin-left: 3vw; margin-right: 3vw;">
-                <img src="/res/images/Staff/JUDY ANN C. DOCTOR.jpg">
-                <p>JUDY ANN C. DOCTOR</p>
-            </span>
-            <span class="teacher" style="margin-left: 3vw; margin-right: 3vw;">
-                <img src="/res/images/Staff/MELODY A. MAGANA.jpg" style="width: 16.2vw;">
-                <p>MELODY A. MAGANA</p>
-            </span>
-            <div class="department" style="margin-top: 0;">
-                <span class="teacher" style="position: relative; bottom: -2.5vw; margin-left: 3vw; margin-right: 3vw;">
-                    <img src="/res/images/Staff/ROSIELYN A. ABRAHAM.png">
-                    <p>ROSIELYN A. ABRAHAM</p>
-                </span>
-                <span class="teacher" style="position: relative; bottom: -2.5vw; margin-left: 3vw; margin-right: 3vw;">
-                    <img src="/res/images/Staff/STEPHANIE JANE G. NUÑEZ.png">
-                    <p>STEPHANIE JANE G. NU&Ntilde;EZ</p>
-                </span>
-                <span class="teacher" style="margin-left: 3vw; margin-right: 3vw;">
-                    <img src="/res/images/Staff/VIVIAN G. LOVETE.png">
-                    <p>VIVIAN G. LOVETE</p>
-                </span>
+        <div class="departments">
+            <div class="departmentVertical">
+                <h2>SENIOR HIGH SCHOOL DEPARTMENT</h2>
+                <div class="staffGroup SHS">
+                    <span class="staff">
+                        <img src="/res/images/Staff/APRIL MAE B. DE LA TORRE.jpg">
+                        <p>APRIL MAE B. DE LA TORRE</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/EDMARK M. BALCE.jpg">
+                        <p>EDMARK M. BALCE</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/EMMYLOU H. MEDINA.jpg">
+                        <p>EMMYLOU H. MEDINA</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/JENNY D. SAMANTE.jpg">
+                        <p>JENNY D. SAMANTE</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/JOAN S. ELEAZAR.jpg">
+                        <p>JOAN S. ELEAZAR</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/JOY KEREL B. DELA CRUZ.jpg">
+                        <p style="margin: 0;">JOY KEREL B. DELA CRUZ</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/RENATO P. DANDO JR..jpg">
+                        <p>RENATO P. DANDO JR.</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/RICKY V. ABIERTA.jpg">
+                        <p>RICKY V. ABIERTA</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/RUBEN V. CERILLO JR..jpg">
+                        <p>RUBEN V. CERILLO JR.</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/ANNALYN M. LLENARISAS.jpg">
+                        <p>ANNALYN M. LLENARISAS</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/SHANE STEPHANIE N. SAMAN.jpg">
+                        <p style="margin: 0;">SHANE STEPHANIE N. SAMAN</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/AUBREY D. VALEROS.jpg">
+                        <p>AUBREY D. VALEROS</p>
+                    </span>
+                </div>
+            </div>
+            <div class="departmentHorizontal">
+                <h2>ARALING PANLIPUNAN DEPARTMENT</h2>
+                <div class="staffGroup AP">
+                    <span class="staff">
+                        <img src="/res/images/Staff/APRIL JOY V. ELLA.jpg">
+                        <p>APRIL JOY V. ELLA</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/CINDY D. LOPEZ.jpg">
+                        <p>CINDY D. LOPEZ</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/JORGE H. SANCHEZ.jpg">
+                        <p>JORGE H. SANCHEZ</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/KRIZZA MAE T. VILLALUNA.jpg">
+                        <p>KRIZZA MAE T. VILLALUNA</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/SARA A. VITE.jpg">
+                        <p>SARA A. VITE</p>
+                    </span>
+                </div>
+            </div>
+            <div class="departmentHorizontal">
+                <h2>ENGLISH DEPARTMENT</h2>
+                <div class="staffGroup ENG">
+                    <span class="staff">
+                        <img src="/res/images/Staff/CECILE F. BUSTAMANTE.jpg">
+                        <p>CECILE F. BUSTAMANTE</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/JACQUELINE V. CERENO.jpg">
+                        <p>JACQUELINE V. CERENO</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/LUDYLIN T. BARDON.jpg">
+                        <p>LUDYLIN T. BARDON</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/MARIBEL O. BRIÑAS.jpg">
+                        <p>MARIBEL O. BRI&Ntilde;AS</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/MELODY O. RASCO.jpg">
+                        <p>MELODY O. RASCO</p>
+                    </span>
+                </div>
+            </div>
+            <div class="departmentHorizontal">
+                <h2>FILIPINO DEPARTMENT</h2>
+                <div class="staffGroup FIL">
+                    <span class="staff">
+                        <img src="/res/images/Staff/GARY M. SAYNO.jpg">
+                        <p>GARY M. SAYNO</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/HELEN C. ALBAÑO.jpg">
+                        <p>HELEN C. ALBA&Ntilde;O</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/LEA B. VILLACRUEL.jpg">
+                        <p>LEA B. VILLACRUEL</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/LEO M. GAJERO.jpg">
+                        <p>LEO M. GAJERO</p>
+                    </span>
+                </div>
+            </div>
+            <div class="departmentHorizontal">
+                <h2>MATHEMATICS DEPARTMENT</h2>
+                <div class="staffGroup MATH">
+                    <span class="staff">
+                        <img src="/res/images/Staff/KRIEZL L. NARVAEZ.jpg">
+                        <p>KRIEZL L. NARVAEZ</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/LAARNI N. SAMAN.jpg">
+                        <p>LAARNI N. SAMAN</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/LINDA B. JAMITO.jpg">
+                        <p>LINDA B. JAMITO</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/MARICEL M. TINDOGAN.jpg">
+                        <p>MARICEL M. TINDOGAN</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/NELSON B. RACASA.jpg">
+                        <p>NELSON B. RACASA</p>
+                    </span>
+                </div>
+            </div>
+            <div class="departmentVertical">
+                <h2>NON-TEACHING STAFF</h2>
+                <div class="staffGroup NTS">
+                    <span class="staff">
+                        <img src="/res/images/Staff/MARINEL A. VARGAS.jpg" onerror="this.src='/res/images/default.jpg';">
+                        <p>MARINEL A. VARGAS</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/MARK ANGELO B. LAVISTE.jpg" onerror="this.src='/res/images/default.jpg';">
+                        <p style="margin: 0;">MARK ANGELO B. LAVISTE</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/MILANY V. ESTACION.jpg" onerror="this.src='/res/images/default.jpg';">
+                        <p>MILANY V. ESTACION</p>
+                    </span>
+                    <div class="staffGroup NTS2">
+                        <span class="staff">
+                            <img src="/res/images/Staff/VILMA S. DE MATA.jpg" onerror="this.src='/res/images/default.jpg';">
+                            <p>VILMA S. DE MATA</p>
+                        </span>
+                    </div>     
+                </div>
+            </div>
+            <div class="departmentHorizontal">
+                <h2>MAPEH DEPARTMENT</h2>
+                <div class="staffGroup MAPEH">
+                    <span class="staff">
+                        <img src="/res/images/Staff/CRIS JOHN G. VILLAFUERTE.jpg">
+                        <p>CRIS JOHN G. VILLAFUERTE</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/EDWARD MARI G. GERIO.jpg">
+                        <p>EDWARD MARI G. GERIO</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/MARJORIE G. ZANTUA.jpg">
+                        <p>MARJORIE G. ZANTUA</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/JONA GRACE S. RAMIREZ.jpg">
+                        <p>JONA GRACE S. RAMIREZ</p>
+                    </span>
+                </div>
+            </div>
+            <div class="departmentHorizontal" style="width: 100%;">
+                <h2>SCIENCE DEPARTMENT</h2>
+                <div class="staffGroup SCI">
+                    <span class="staff">
+                        <img src="/res/images/Staff/EIMEREN B. BASTO.jpg">
+                        <p>EIMEREN B. BASTO</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/ENIRISA B. PALIVINO.jpg">
+                        <p>ENIRISA B. PALIVINO</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/JUDY ANN C. DOCTOR.jpg">
+                        <p>JUDY ANN C. DOCTOR</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/MELODY A. MAGANA.jpg">
+                        <p>MELODY A. MAGANA</p>
+                    </span>
+                </div>
+                <div class="staffGroup SCI2">
+                    <span class="staff">
+                        <img src="/res/images/Staff/ROSIELYN A. ABRAHAM.jpg">
+                        <p>ROSIELYN A. ABRAHAM</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/STEPHANIE JANE G. NUÑEZ.jpg">
+                        <p>STEPHANIE JANE G. NU&Ntilde;EZ</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/VIVIAN G. LOVETE.jpg">
+                        <p>VIVIAN G. LOVETE</p>
+                    </span>
+                </div>
+            </div>
+            <div class="departmentHorizontal" style="width: 100%;">
+                <h2>TLE DEPARTMENT</h2>
+                <div class="staffGroup TLE">
+                    <span class="staff">
+                        <img src="/res/images/Staff/CATHERINE V. PAQUITA.jpg">
+                        <p>CATHERINE V. PAQUITA</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/ELIZABETH T. PAQUITA.jpg">
+                        <p>ELIZABETH T. PAQUITA</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/LOIDA F. ROSALIN.jpg">
+                        <p>LOIDA F. ROSALIN</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/MAUREEN JESSA M. BAMIANO.jpg">
+                        <p style="margin-left: 5%; margin-right: 5%;">MAUREEN JESSA M. BAMIANO</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/PERCIVAL M. GONZALEZ.jpg">
+                        <p>PERCIVAL M. GONZALEZ</p>
+                    </span>
+                    <span class="staff">
+                        <img src="/res/images/Staff/RENALYN P. STA. ROSA.jpg">
+                        <p>RENALYN P. STA. ROSA</p>
+                    </span>
+                </div>
             </div>
         </div>
-        <div class="department">
-            <h2>TLE DEPARTMENT</h2>
-            <span class="teacher" style="position: relative; bottom: -2.5vw; margin-left: 3vw; margin-right: 3vw;">
-                <img src="/res/images/Staff/CATHERINE V. PAQUITA.png" style="width: 17.5vw;">
-                <p>CATHERINE V. PAQUITA</p>
-            </span>
-            <span class="teacher" style="position: relative; bottom: -2.5vw; margin-left: 3vw; margin-right: 3vw;">
-                <img src="/res/images/Staff/ELIZABETH T. PAQUITA.jpg" style="width: 17.5vw;">
-                <p>ELIZABETH T. PAQUITA</p>
-            </span>
-            <span class="teacher" style="margin-left: 3vw; margin-right: 3vw;">
-                <img src="/res/images/Staff/LOIDA F. ROSALIN.jpg" style="width: 17.5vw;">
-                <p>LOIDA F. ROSALIN</p>
-            </span>
-            <span class="teacher" style="position: relative; bottom: -2.5vw; margin-left: 3vw; margin-right: 3vw;">
-                <img src="/res/images/Staff/MAUREEN JESSA M. BAMIANO.jpg" style="width: 16.5vw;">
-                <p>MAUREEN JESSA M. BAMIANO</p>
-            </span>
-            <span class="teacher" style="position: relative; bottom: -2.5vw; margin-left: 3vw; margin-right: 3vw;">
-                <img src="/res/images/Staff/PERCIVAL M. GONZALEZ.jpg">
-                <p>PERCIVAL M. GONZALEZ</p>
-            </span>
-            <span class="teacher" style="position: relative; bottom: -2.5vw; margin-left: 3vw; margin-right: 3vw;">
-                <img src="/res/images/Staff/RENALYN P. STA. ROSA.jpg">
-                <p>RENALYN P. STA. ROSA</p>
-            </span>
-        </div>
-        -->
     </main>
     <footer>
         <script src="/script.js"></script>
