@@ -23,11 +23,8 @@ nav {
 }
 
 nav ul {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     margin-top: 1vw;
     color: rgb(255, 255, 255);
@@ -77,7 +74,7 @@ nav ul li:hover:after{
     color: white;
 }
 
-.enroll{
+/*.enroll{
     font-family: "Bebas Neue", sans-serif;
     float: right;
     margin-right: 2.5%;
@@ -91,7 +88,7 @@ nav ul li:hover:after{
     padding-right: 1.5vw;
     border-radius: 50px;
     border: #ffff solid 2px;
-}
+}*/
 
 .notAvailable{
     display: flex; 
