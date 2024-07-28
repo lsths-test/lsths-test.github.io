@@ -5,6 +5,123 @@ menuBtn.onclick = () => {
   menu.classList.toggle("active-nav");
 };
 
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdownButton = document.querySelector('.accessibility');
+  const dropdownMenu = document.querySelector('.accessibilityDropdown');
+
+  dropdownButton.addEventListener('click', function() {
+      // Toggle the visibility of the dropdown menu
+      dropdownMenu.style.top = dropdownMenu.style.top === '4.3vw' ? '-20vw' : '4.3vw';
+  });
+
+  // Optional: Hide the dropdown when clicking outside
+  document.addEventListener('click', function(event) {
+      if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+          dropdownMenu.style.top = '-20vw';
+      }
+  });
+});
+
+const lumosBtn = document.querySelector(".lumos")
+const noxBtn = document.querySelector(".nox")
+const wand = document.querySelector(".wand");
+// High Contrast
+function lumos(){
+  root = document.documentElement;
+  wand.style.display = 'block';
+  setTimeout(() => {
+    root.style.setProperty('--textColor', "black");
+    root.style.setProperty('--backgroundColor', "white");
+    root.style.setProperty('--divBackgroundColor', "#f5f5f5");
+    wand.classList.add("active-wand");
+  },10)
+  wand.style.opacity = 1;
+  setTimeout(() => {
+    wand.style.opacity = 0;
+  }, 600);
+  setTimeout(() => {
+    wand.classList.remove("active-wand");
+    wand.style.display = 'none';
+  },800);
+  noxBtn.style.display = 'block';
+  lumosBtn.style.display = 'none';
+}
+
+function nox(){
+  root = document.documentElement;
+  wand.style.display = 'block';
+  setTimeout(() => {
+    root.style.setProperty('--textColor', "white");
+    root.style.setProperty('--backgroundColor', "black");
+    root.style.setProperty('--divBackgroundColor', "#242424");
+    wand.classList.add("active-wand");
+  }, 10);
+  wand.style.opacity = 1;
+  setTimeout(() => {
+    wand.style.opacity = 0;
+  }, 600);
+  setTimeout(() => {
+    wand.classList.remove("active-wand");
+    wand.style.display = 'none';
+  },800);
+  lumosBtn.style.display = 'block';
+  noxBtn.style.display = 'none';
+}
+
+lumosBtn.addEventListener('click', lumos);
+noxBtn.addEventListener('click', nox);
+
+// Arrow Up
+const arrowUp = document.querySelector(".arrow_up")
+const arrowDown = document.querySelector(".arrow_down")
+window.addEventListener('scroll', function() {  
+  // Calculate the scroll position and document height
+  const scrollTop = window.scrollY; // Number of pixels the document has already been scrolled vertically
+  const windowHeight = window.innerHeight; // Inner height of the window in pixels
+
+  // Check if the user has scrolled to the bottom
+  if (scrollTop <= windowHeight / 4) {
+    arrowUp.classList.remove("active-up")
+  } else {
+    arrowUp.classList.add("active-up")
+  }
+});
+
+// Scroll Up & Down
+arrowUp.onclick = () => {
+  window.scrollTo({
+    top: 0,
+    behavior:'smooth'
+  });
+}
+arrowDown.onclick = () => {
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior:'smooth'
+  });
+}
+
+// Function to increase text size
+function increaseTextSize() {
+  const root = document.documentElement;
+  const currentSize = parseFloat(getComputedStyle(root).getPropertyValue('--defaultTextSize'));
+  const newSize = Math.min(currentSize + 0.1, 2.3);
+  root.style.setProperty('--defaultTextSize', newSize);
+}
+
+// Function to decrease text size
+function decreaseTextSize() {
+  const root = document.documentElement;
+  const currentSize = parseFloat(getComputedStyle(root).getPropertyValue('--defaultTextSize'));
+  const newSize = Math.max(currentSize - 0.1, 1.8);
+  root.style.setProperty('--defaultTextSize', newSize);
+}
+
+// Add event listeners to the buttons
+document.querySelector('.text_increase').addEventListener('click', increaseTextSize);
+document.querySelector('.text_decrease').addEventListener('click', decreaseTextSize);
+
+// Fill Student Tables
 function populateData(data) {
   const rows = data.split('\n');
   const maleData = [];
@@ -109,7 +226,8 @@ function showCard(cardId) {
   }
 }
 
-// Custom video controls
+
+// Promotional Video
 var tag = document.createElement("script")
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -123,7 +241,7 @@ function onYouTubeIframeAPIReady() {
         playerVars: {
           hd: 1,
           autoplay: 1,
-          controls: 0,
+          controls: 1,
           mute: 1,
           loop: 1,
           rel: 0,
@@ -137,62 +255,6 @@ function onYouTubeIframeAPIReady() {
 
 function onPlayerReady(event) {
   event.target.playVideo();
-}
-
-function onPlayerReady(event) {
-  const playBtn = document.getElementById('playBtn');
-  const pauseBtn = document.getElementById('pauseBtn');
-  const unmuteBtn = document.getElementById('unmuteBtn');
-  const muteBtn = document.getElementById('muteBtn');
-
-  let Playing = false; 
-  let Muted;
-  function checkPlayerState() {
-    Playing = player.getPlayerState() === YT.PlayerState.PLAYING;
-    Muted = player.isMuted();
-    updateButtonVisibility(Playing, Muted);
-  }
-  checkPlayerState();
-  setInterval(checkPlayerState, 1);
-
-  function updateButtonVisibility(Playing, Muted) {
-    playBtn.classList.toggle("hidden", Playing);
-    pauseBtn.classList.toggle("hidden", !Playing);
-    unmuteBtn.classList.toggle("hidden", Muted);
-    muteBtn.classList.toggle("hidden", !Muted);
-  }  
-
-  playBtn.addEventListener('click', function () {
-    if (!Playing) {
-      player.playVideo();
-      Playing = true;
-    }
-    updateButtonVisibility(Playing);
-  });
-
-  pauseBtn.addEventListener('click', function () {
-    if (Playing) {
-      player.pauseVideo();
-      Playing = false;
-    }
-    updateButtonVisibility(Playing);
-  });
-
-  unmuteBtn.addEventListener('click', function () {
-    if (!Muted) {
-      player.mute();
-      Muted = true;
-    }
-    updateButtonVisibility(Muted)
-  });
-
-  muteBtn.addEventListener('click', function () {
-    if (Muted) {
-      player.unMute();
-      Muted = false;
-    }
-      updateButtonVisibility(Muted)
-  });
 }
 
 // show fullow up question

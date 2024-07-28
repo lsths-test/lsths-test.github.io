@@ -1,3 +1,10 @@
+:root{
+    --defaultTextSize: 2;
+    --textColor: black;
+    --backgroundColor: white;
+    --divBackgroundColor: #f5f5f5;
+}
+
 /* Global Styles / For All */
 *{
     margin: 0px;
@@ -7,6 +14,7 @@
 
 html, body:not([style*=font-family]){
     font-family: "Source-Sans-Pro", sans-serif;
+    background-color: var(--backgroundColor);
 }
 
 main{
@@ -22,27 +30,30 @@ nav {
     z-index: 9999;
 }
 
-nav ul {
+nav ul.menu-options{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
     margin-top: 1vw;
     color: rgb(255, 255, 255);
 }
 
-nav ul li {
+nav ul.menu-options li {
     list-style: none;
 }
 
-nav ul a {
-    font-size: 2vw;
+nav ul.menu-options a {
+    font-size: calc(var(--defaultTextSize) * 1vw);
     font-family: "Bebas Neue", sans-serif;
     color: white;
     text-decoration: none;
     padding: 1.4vw;
 }
 
-nav ul li::after {
+nav ul.menu-options li::after {
     content: '';
     display: block;
     margin: auto;
@@ -52,7 +63,7 @@ nav ul li::after {
     transition: width 0.5s ease, background-color 0.5s ease;
 }
 
-nav ul li:hover:after{
+nav ul.menu-options li:hover:after{
     width: 100%;
     background: #51cfc3;
   }
@@ -64,7 +75,7 @@ nav ul li:hover:after{
 #schoolNameTopLeft{
     margin-left: 3%;
     color: #c1f6ed;
-    font-size: 3.5vw;
+    font-size: calc(var(--defaultTextSize) * 1.75vw);
     font-family: "Bebas Neue", sans-serif;
     float: left;
 }
@@ -72,6 +83,95 @@ nav ul li:hover:after{
 .menu-btn{
     display:none;
     color: white;
+}
+
+.accessibility{
+    text-align: center;
+    width: 5vw;
+    padding-top: .2vw;
+    height: calc(var(--defaultTextSize) * 2vw);
+    color: #c1f6ed;
+    font-size: calc(var(--defaultTextSize) * 1.5vw);
+    cursor: pointer;
+    margin-right: 3%;
+    float: right;
+}
+
+.accessibility:hover{
+    background-color: #6ba59b;
+}
+
+.accessibilityDropdown{
+    padding-top: 10px;
+    background-color: #49a89d;
+    border: #7dd8d1 solid;
+    text-align: center;
+    position: fixed;
+    color: #c1f6ed;
+    font-size: calc(var(--defaultTextSize) * 1vw);
+    z-index: 990;
+    top: -20vw;
+    right: 0;
+    margin-right: 3vw;
+    width: calc(var(--defaultTextSize) * 2.5vw);
+    transition: 0.2s;
+}
+
+.accessibilityDropdown ul{
+    list-style: none;
+}
+
+.accessibilityDropdown ul li:hover{
+    background-color: #5ad3c9;
+    cursor: pointer;
+}
+
+.arrow_up{
+    background-color: #dfdfdf;
+    border: #d5d5d5 solid 5px;
+    border-radius: 10px;
+    font-size: calc(var(--defaultTextSize) * 1vw);
+    width: 6vw;
+    position: fixed;
+    bottom: 3vw;
+    right: -7vw;
+    padding: 2px 0px 0px 13px;
+    transition: 0.1s ease-in-out;
+    cursor: pointer;
+    z-index: 9980;
+}
+
+.arrow_up.active-up{
+    right: -0.7vw;
+}
+
+.wand{
+    display: none;
+    rotate: 0deg;
+    position: fixed;
+    bottom: -7vw;
+    right: -10vw;
+    width: 3vw;
+    height: 90%;
+    background-color: #a76e13;
+    border-radius: 15px;
+    box-shadow: 0 0 15px 5px #717171;
+    opacity: 0;
+    transition: opacity 0.5s, box-shadow 0.5s;
+}
+
+.wand.active-wand{
+    display: block;
+    transform: rotate(-45deg);
+    transition: .5s;
+    right: 13vw;
+}
+
+.wand img{
+    width: 60vw;
+    position: absolute;
+    top: -70%;
+    right: -900%;
 }
 
 /*.enroll{
@@ -126,24 +226,21 @@ nav ul li:hover:after{
     height: 11vw;
     width: 46vw;
     left: 1vw;
+    color: var(--textColor);
 }
 
 #line{
     width: 100%;
     height: .3vw;
-    background-color: black;
+    background-color: var(--textColor);
 }
 
 #agent_header{
-    font-size: 2.5vw;
+    font-size: calc(var(--defaultTextSize) * 1.10vw);
 }
 
 #agent_footer{
-    font-size: 3vw;
-}
-nav #icon{
-    color: white;
-    font-size: 40px;
+    font-size: calc(var(--defaultTextSize) * 1.35vw);
 }
 
 .logos{
@@ -162,16 +259,17 @@ nav #icon{
     margin-top: 20vh;
     margin-left: 5vw;
     margin-right: 5vw;
+    color: var(--textColor);
 }
 
 .homepage_bio h2{
-    font-size: 5vw;
+    font-size: calc(var(--defaultTextSize) * 2.5vw);
     font-family: "source-sans-pro";
     font-weight: 700;
 }
 .homepage_bio p{
     margin-top: 5vh;
-    font-size: 1.5vw;
+    font-size: calc(var(--defaultTextSize) * .75vw);
     
 }
 
@@ -201,29 +299,9 @@ nav #icon{
     height: 100%;
 }
 
-.video_controls button.hidden{
-    display: none;
-}
-.LSTHS_campaign .video_controls button{
-    position: absolute;
-    background-color: transparent;
-    border: none;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    font-size: 2vw;
-    margin: .5vw;
-}
-
-.LSTHS_campaign .video_controls{
-    position: relative;
-    left: -2vw;
-    display: flex;
-    justify-content: space-around;
-}
-
 /* About */
 .aboutLogo{
-    display: flex; 
+    display: flex;
     justify-content: center;
 }
 
@@ -232,11 +310,14 @@ nav #icon{
 }
 
 .mission-vision-core_values{
-    padding: 0 70px 0 50px;
+    padding: 0 50px 0 50px;
+    font-size: calc(var(--defaultTextSize) * .60vw);
+    color: var(--textColor);
 }
 
 .mission-vision-core_values p{
-    margin-left: 20px;
+    margin-left: 2vw;
+    margin-right: 2vw;
     text-align: justify;
 }
 
@@ -257,241 +338,37 @@ nav #icon{
     font-style: italic;
 }
 
-/* All sections */
-.section_adviser{
-    text-align: center;
-}
-
-.students table{
-    width: 100%;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px; 
-}
-
-.students th,
-.students td{
-    width: 50%;
-    border-style: solid;
-    border-width: 1px;
-    font-size: 1.7vw;
-}
-
-.students td:hover{
-    background-color: #ebeaea;
-    cursor: pointer;
-}
-.card{
-    margin-top: 3vw;
-    display: none;
-    padding: 10px;
-    position: relative;
-    transform: translateY(0);
-    left: 50%;
-    transform: translateX(-50%);
-    border-style: solid;
-    border-width: 2px;
-    width: 50vw;
-    background-color: white;
-    font-size: 2vw;
-    margin-bottom: 3vw;
-}
-
-.card img{
-    border-style: solid;
-    border-width: 2px;
-    width: 15vw;
-}
-
-.card .Sname,
-.card .Sage,
-.card .Ssex,
-.card .Sbday {
-    position: absolute;
-    display: block;
-    left: 35%;
-}
-
-.card .Sname {
-    top: 10%;
-}
-
-.card .Sage {
-    top: 27%;
-}
-
-.card .Ssex {
-    top: 44%;
-}
-
-.card .Sbday {
-    top: 61%;
-}
-
-.card.active-card{
-    display: block;
-}
-
-/* Grade Option Table (students.html)*/
-.grade_options table{
-    width: 100%;
-    border-style: solid;
-    border-width: .2vw;
-    border-color: black;
-
-}
-.grade_options td{
-    border-style: solid;
-    border-width: .1vw;
-    border-color: black;
-    text-align: center;
-    width: 100vw;
-}
-
-.grade_options a{
-    text-decoration: none;
-    color: black;
-}
-
-/* Contacts (contact.html)*/
-
-.smallLogo{
-    scale: 50%;
-    margin: -5vw;
-    margin-bottom: -2vw;
-}
-
-.contact{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 3.5vw;
-    font-size: 1.8vw;   
-}
-
-.contact p{
-    margin-bottom: 1.5vw;
-    transition: transform.3s ease;
-    width: auto;
-}
-
-.contact p i{
-    margin-right: 1vw;
-}
-
-.contact p a{
-    text-decoration: none;
-    color: black;    
-}
-
-.contact-map{
-    position: relative;
-    width: 100%;
-    margin-top: 5vw;
-    margin-bottom: 9.5vw;
-}
-
-.map{
-    position: absolute;
-    right: 5vw;
-    width: 40%;
-    height: 50vh;
-    top: -2vw;
-}
-.map iframe{
-    height: 100%;
-    width: 100%;
-    right: 0;
-    position: absolute;
-    border-style: solid;
-    border-width: 15px;
-    border-radius: 10px;
-    border-color: white;
-    box-shadow: 0px 5px 10px 10px#d5d5d5;
-
-}
-
-.contact p:hover{
-    transform: translateY(-20%);
-    text-shadow: 3px 3px 5px #c4c4c4;
-}
-
-
-.contact_box{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    margin-left: 5vw;
-    margin-top: 20vw;
-    margin-bottom: 9vw;
-    margin-top: 3.5vw;
-}
-
-.contact_us{
-    position: relative;
-    height: 35vw;
-    width: 45vw;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    margin-bottom: -5vw;
-    gap: 20px;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0px 5px 10px 10px#d5d5d5;
-}
-
-.contact_inputs{
-    outline: none;
-    border-style: solid;
-    border-color: black;
-    border-width: .2vw;
-    width: 95%;
-    height: 10%; 
-    padding-left: 25px; 
-    font-weight: 500; 
-    color:#666;
-    border-radius: 50px;
-}
-
-.contact_inputs:hover{
-    background-color: #ededed;
-}
-
-textarea.contact_inputs{
-    padding-left: 25px;
-    padding-top: 15px;
-    height: 50%;
-    border-radius: 15px;
-}
-
 /* Staff */
 .principal{
     position: relative;
     text-align: center;
     width: 100%;
+    color: var(--textColor);
 }
 
 .principalName{
-    font-size: 2.5vw;
+    font-size: calc(var(--defaultTextSize) * 1.25vw);
 }
 
 .principalRole{
     font-family: 'Courier New', Courier, monospace; 
-    font-size: 1.5vw; 
+    font-size: calc(var(--defaultTextSize) * .75vw); 
     margin-bottom: -5vw;
 }
 
 h2{
     text-align: center;
+    font-size: calc(var(--defaultTextSize) * .75vw);
+    color: var(--textColor);
 }
 
 .staff{
     text-align: center;
+    color: var(--textColor);
 }
 
 .staff p{
-    font-size: 90%;
+    font-size: calc(var(--defaultTextSize) * .50vw);
     margin-right: 11%;
     margin-left: 11%;
 }
@@ -544,7 +421,7 @@ h2{
 
 .departmentVertical{
     width: 36%;
-    background-color: #f5f5f5;
+    background-color: var(--divBackgroundColor);
     border: #e9e9e9 solid 5px;
     border-radius: 25px;
     padding: 5px;
@@ -555,7 +432,7 @@ h2{
 
 .departmentHorizontal{
     width: 63%;
-    background-color: #f5f5f5;
+    background-color: var(--divBackgroundColor);
     border: #e9e9e9 solid 5px;
     border-radius: 25px;
     padding: 5px;
@@ -565,9 +442,236 @@ h2{
     float: right;
 }
 
-.spacor{
+/* Grade Option Table (students.html)*/
+.title-h1{
+    text-align: center; 
+    margin-top: -1vw; 
+    font-size: calc(var(--defaultTextSize) * 1.75vw);
+    color: var(--textColor);
+}
+.SY{
+    text-align: center; 
+    margin-top: -2vw; 
+    margin-bottom: 2vw; 
+    font-size: calc(var(--defaultTextSize) * 1.25vw);
+    color: var(--textColor);
+}
+
+.grade_level{
+    text-align: center; 
+    margin-top: 30px;
+    font-size: calc(var(--defaultTextSize) * .75vw);
+}
+
+.grade_options table{
+    width: 100%;
+    border-style: solid;
+    border-width: .2vw;
+    border-color: var(--textColor);
+
+}
+.grade_options td{
+    font-size: calc(var(--defaultTextSize) * 0.6vw);
+    border-style: solid;
+    border-width: .1vw;
+    border-color: var(--textColor);
+    text-align: center;
+    width: 100vw;
+}
+
+.grade_options a{
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+/* All sections */
+.section_adviser{
+    text-align: center;
+    color: var(--textColor);
+}
+
+.students table{
+    width: 100%;
+    border-style: solid;
+    border-color: var(--textColor);
+    border-width: 1px; 
+}
+
+.students th,
+.students td{
+    width: 50%;
+    border-style: solid;
+    border-width: 1px;
+    font-size: calc(var(--defaultTextSize) * .75vw);
+    color: var(--textColor);
+}
+
+.students td:hover{
+    background-color: var(--divBackgroundColor);
+    cursor: pointer;
+}
+.card{
+    margin-top: 3vw;
+    display: none;
+    padding: 10px;
+    position: relative;
+    transform: translateY(0);
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-width: 2px;
+    width: 50vw;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    font-size: calc(var(--defaultTextSize) * 1vw);
+    margin-bottom: 3vw;
+}
+
+.card img{
+    border-style: solid;
+    border-width: 2px;
+    width: 15vw;
+}
+
+.card .Sname,
+.card .Sage,
+.card .Ssex,
+.card .Sbday {
+    position: absolute;
+    display: block;
+    left: 35%;
+}
+
+.card .Sname {
+    top: 10%;
+}
+
+.card .Sage {
+    top: 27%;
+}
+
+.card .Ssex {
+    top: 44%;
+}
+
+.card .Sbday {
+    top: 61%;
+}
+
+.card.active-card{
+    display: block;
+}
+
+/* Contacts (contact.html)*/
+.smallLogo{
+    scale: 50%;
+    margin: -5vw;
+    margin-bottom: -2vw;
+}
+
+.contact{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 3.5vw;
+    font-size: calc(var(--defaultTextSize) * .8vw);   
+}
+
+.contact p{
+    margin-bottom: 1.5vw;
+    transition: transform.3s ease;
+    width: auto;
+}
+
+.contact p i{
+    margin-right: 1vw;
+}
+
+.contact p a{
+    text-decoration: none;
+    color: var(--textColor);    
+}
+
+.contact-map{
+    position: relative;
+    width: 100%;
+    margin-top: 5vw;
+    margin-bottom: 9.5vw;
+}
+
+.map{
+    position: absolute;
+    right: 5vw;
+    width: 40%;
+    height: 50vh;
+    top: -2vw;
+}
+.map iframe{
+    height: 100%;
+    width: 100%;
+    right: 0;
+    position: absolute;
+    border-style: solid;
+    border-width: 15px;
+    border-radius: 10px;
+    border-color: white;
+    box-shadow: 0px 5px 10px 10px#d5d5d5;
+
+}
+
+.contact p:hover{
+    transform: translateY(-20%);
+    text-shadow: 3px 3px 5px #c4c4c4;
+}
+
+
+.contact_box{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 5vw;
+    margin-top: 20vw;
+    margin-bottom: 9vw;
+    margin-top: 3.5vw;
+}
+
+
+.contact_us{
+    position: relative;
+    height: 35vw;
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: -5vw;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px 10px#d5d5d5;
+}
+
+.contact_inputs{
+    outline: none;
+    border-style: solid;
+    border-color: var(--textColor);
+    border-width: .2vw;
+    width: 95%;
+    height: 10%; 
+    padding-left: 25px; 
+    font-weight: 500; 
+    color:#666;
+    border-radius: 50px;
+}
+
+.contact_inputs:hover{
+    background-color: #ededed;
+}
+
+textarea.contact_inputs{
+    padding-left: 25px;
+    padding-top: 15px;
+    height: 50%;
+    border-radius: 15px;
 }
 
 /* Enrollment Form (enroll.html)*/
@@ -592,7 +696,7 @@ h2{
 .title-form{
     text-align: center; 
     margin-top: 2vw;
-    font-size: 2.5vw;
+    font-size: calc(var(--defaultTextSize) * 1.25vw);
 }
 
 .enrollmentForm .question input:not(.radioButton),
@@ -686,7 +790,7 @@ h2{
     float: right; 
     margin-right: 30px; 
     margin-top: -5.5vw; 
-    font-size: 2vw; 
+    font-size: calc(var(--defaultTextSize) * 1vw); 
     padding: 7px 20px 7px 20px; 
     color:white; 
     border:solid #127a82; 
@@ -745,7 +849,7 @@ h2{
     }
     .contact{
         position: relative;
-        font-size: 3vw;
+        font-size: calc(var(--defaultTextSize) * 1.5vw);
     }
 
     .map{
@@ -774,7 +878,7 @@ h2{
         margin-left: 5vw;
     }
     .row1 h2{
-        font-size: 2vw;
+        font-size: calc(var(--defaultTextSize) * 1vw);
     }
 
     .form{
@@ -795,7 +899,7 @@ h2{
     }
 
     .staff p{
-        font-size: 100%;
+        font-size: calc(var(--defaultTextSize) * .9vw);
         margin-right: 11%;
         margin-left: 11%;
     }
@@ -826,6 +930,11 @@ h2{
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .departmentHorizontal h2,
+    .departmentVertical h2{
+        font-size: calc(var(--defaultTextSize) * 1.25vw);
+    }
+
     .departmentVertical{
         width: 100%;
         padding: 5px;
@@ -842,6 +951,33 @@ h2{
         margin-bottom: 1.4%;
         float: none;
     }
+
+    .grade_level{
+        font-size: calc(var(--defaultTextSize) * 2vw);
+    }
+
+    .title-h1{
+        font-size: calc(var(--defaultTextSize) * 3vw);
+    }
+
+    .SY{
+        font-size: calc(var(--defaultTextSize) * 2.5vw);
+    }
+
+    .arrow_up{
+        padding-left: 10px;
+        font-size: calc(var(--defaultTextSize) * 1.5vw);
+        width: 7vw;
+    }
+
+    .arrow_up.active_up{
+        right: -1vw;
+    }
+
+    .wand{
+        height: 80%;
+        bottom: -25vw;
+    }
 }
 @media only screen and (max-width: 600px) {
     nav{
@@ -851,14 +987,12 @@ h2{
         display: block;
         text-align: center;
         margin-top: 20px;
-
     }
-    nav ul li a{
-        font-size: 4.5vw;
+    nav ul.menu-options li a{
+        font-size: calc(var(--defaultTextSize) * 2vw);
     }
-    nav .menu-options{
-        position: fixed;
-        top: 6.6vw;
+    nav ul.menu-options{
+        top: 6vw;
         left: -100%;
         border-top: #5ccac1 solid 1px;
         background-color:#218279;
@@ -870,7 +1004,7 @@ h2{
     }
 
     .menu-options.active-nav{
-        left: 19%;
+        left: 17%;
     }
     .active a{
         background-color: transparent;
@@ -883,7 +1017,7 @@ h2{
         cursor:pointer;
         display: block;
         float: right;
-        font-size: 3.7vw;
+        font-size: calc(var(--defaultTextSize) * 1.6vw);
         margin: 1vw;
         margin-right: 5%;
     }
@@ -892,8 +1026,19 @@ h2{
         margin-top: 1vw;
     }
 
+    .accessibility{
+        font-size: calc(var(--defaultTextSize) * 1.7vw);
+        margin-top: .7vw;
+    }
+
+    .accessibilityDropdown{
+        font-size: calc(var(--defaultTextSize) * 1.3vw);
+        margin-right: 12vw;
+
+    }
+
     #schoolNameTopLeft{
-        font-size: 5vw;
+        font-size: calc(var(--defaultTextSize) * 2.5vw);
     }
 
     .agent{
@@ -904,7 +1049,7 @@ h2{
     } 
 
     .notAvailable{
-        font-size: 4vw;
+        font-size: calc(var(--defaultTextSize) * 2vw);
     }
     main{
         margin-top: 10vw;
@@ -912,16 +1057,16 @@ h2{
 
     .students th,
     .students td{
-        font-size: 2.3vw;
+        font-size: calc(var(--defaultTextSize) * 1.15vw);
     }
 
     .contact{
         position: relative;
-        font-size: 3.5vw;
+        font-size: calc(var(--defaultTextSize) * 1.75vw);
     }
 
     .LSTHS_campaign .video_controls button{
-        font-size: 4vw;
+        font-size: calc(var(--defaultTextSize) * 2vw);
     }
     
     .LSTHS_campaign .video_controls{
@@ -929,7 +1074,7 @@ h2{
     }
 
     .homepage_bio p{
-        font-size: 2.3vw;
+        font-size: calc(var(--defaultTextSize) * 1.15vw);
     }
 
     .video_container{
@@ -948,7 +1093,7 @@ h2{
     }
 
     .contact_box h2{
-        font-size: 5vw;
+        font-size: calc(var(--defaultTextSize) * 2.5vw);
     }
 
     .contact_inputs{
@@ -975,7 +1120,7 @@ h2{
     }
 
     .section_adviser{
-        font-size: 2vw;
+        font-size: calc(var(--defaultTextSize) * 1vw);
     }
 
     .card{
@@ -997,13 +1142,13 @@ h2{
 
     .enroll{
         margin-top: .6vw;
-        font-size: 3vw;
+        font-size: calc(var(--defaultTextSize) * 1.5vw);
         padding: .3vw;
         padding-left: 2vw;
         padding-right: 2vw;
     }
     .title-form{
-        font-size: 3.7vw;
+        font-size: calc(var(--defaultTextSize) * 1.80vw);
         margin-left: 10vw;
     }
 
@@ -1015,7 +1160,7 @@ h2{
         position: relative;
         margin-top: 3vw;
         width: 100%;
-        font-size: 4vw;
+        font-size: calc(var(--defaultTextSize) * 2vw);
         margin-right: 0;
         padding: 2vw;
     }
@@ -1035,11 +1180,11 @@ h2{
     }
     
     .row1 h2{
-        font-size: 4vw;
+        font-size: calc(var(--defaultTextSize) * 2vw);
     }
 
     .gradeLevelEnrollTo{
-        font-size: 4vw;
+        font-size: calc(var(--defaultTextSize) * 2vw);
     }
 
     .enrollmentForm{
@@ -1047,15 +1192,15 @@ h2{
     }
 
     .form{
-        font-size: 4vw;
+        font-size: calc(var(--defaultTextSize) * 2.5vw);
     }
 
     .form h2{
-        font-size: 4vw;
+        font-size: calc(var(--defaultTextSize) * 2vw);
     }
 
     .sub-title{
-        font-size: 1vw;
+        font-size: calc(var(--defaultTextSize) * .5vw);
     }
 
     .questionRow,
@@ -1098,7 +1243,7 @@ h2{
     }
 
     .staff p{
-        font-size: 2.5vw;
+        font-size: calc(var(--defaultTextSize) * 1.25vw);
         margin: 0;
     }
 
@@ -1110,9 +1255,42 @@ h2{
         grid-template-columns: repeat(3, 1fr);
     }
     .principalName{
-        font-size: 3.5vw;
+        font-size: calc(var(--defaultTextSize) * 1.75vw);
     }
     .principalRole{
-        font-size: 2.5vw;
+        font-size: calc(var(--defaultTextSize) * 1.25vw);
+    }
+
+    .grade_level{
+        font-size: calc(var(--defaultTextSize) * 3vw);
+    }
+
+    .mission-vision-core_values{
+        font-size: calc(var(--defaultTextSize) * 1.5vw);
+    }
+
+    .mission-vision-core_values h2{
+        font-size: calc(var(--defaultTextSize) * 2vw);
+    }
+
+    .arrow_up{
+        font-size: calc(var(--defaultTextSize) * 2vw);
+        padding-left: 5px;
+        width: 10vw;
+    }
+
+    .arrow_up.active-up{
+        right: -1.5vw;
+    }
+
+    .wand{
+        height: 70%;
+        width: 5vw;
+        bottom: -30vw;
+    }
+
+    .wand img{
+        top: -50%;
+        right: -500%;
     }
 }

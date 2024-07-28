@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>9-Mapagpakumbaba</title>
+    <title>9-Rutherford</title>
     <link rel="stylesheet" href="/styles.css">
     <link rel="icon" type="image/ico" sizes="96x96" href="/res/images/favicon.ico?"> 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -24,12 +24,21 @@
                 <li class="active"><a href="/students">Students</a></li>
                 <li><a href="/contact">Contacts</a></li>
             </ul>
+            <div class="accessibility"><i class="fa-solid fa-universal-access"></i></div>
             <!--<p><a href="/404" class="enroll">Enroll</a></p>-->
         </nav>
+        <div class="accessibilityDropdown">
+            <ul>
+                <li style="border-bottom: #7dd8d1 solid;" title="High Contrast"><i class="fa-solid fa-moon nox" style="width: 100%;"></i><i class="fa-solid fa-sun lumos" style="display: none; width: 100%;"></i></li>
+                <li class="text_increase" style="border-bottom: #7dd8d1 solid;" title="Increase Text Size"><i class="fa-solid">A+</i></li>
+                <li class="text_decrease" style="border-bottom: #7dd8d1 solid;" title="Decrease Text Size"><i class="fa-solid">A-</i></li>
+                <li class="arrow_down" title="Go to the bottom"><i class="fa-solid fa-arrow-down"></i></li>
+            </ul>
+        </div>
     </header>
     <main>
         <div class="section_adviser">
-            <h1>9-Mapagpakumbaba</h1>
+            <h1>9-Rutherford</h1>
             <h2>Adviser: Nelson B. Racasa</h2>
         </div>
         <div class="students">
@@ -399,9 +408,11 @@
         </div>
     </main>
     <footer>
+        <div class="arrow_up"><i class="fa-solid fa-circle-arrow-up"></i></div>
+        <div class="wand"><img src="/res/images/lumos_nox.png"></div>
         <script src="/script.js"></script>
         <script>
-            fetch('9-Mapagpakumbaba.txt')
+            fetch('9-Rutherford.txt')
                 .then(response => response.text())
                 .then(data => {
                     populateData(data);
