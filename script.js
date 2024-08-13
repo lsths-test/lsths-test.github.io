@@ -11,13 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
   dropdownButton.addEventListener('click', function() {
       // Toggle the visibility of the dropdown menu
-      dropdownMenu.style.top = dropdownMenu.style.top === '4.3vw' ? '-20vw' : '4.3vw';
+      dropdownMenu.style.top = dropdownMenu.style.top === '4.5vw' ? '-50vw' : '4.5vw';
   });
 
   // Optional: Hide the dropdown when clicking outside
   document.addEventListener('click', function(event) {
       if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
-          dropdownMenu.style.top = '-20vw';
+          dropdownMenu.style.top = '-50vw';
       }
   });
 });
@@ -52,7 +52,7 @@ function nox(){
   wand.style.display = 'block';
   setTimeout(() => {
     root.style.setProperty('--textColor', "white");
-    root.style.setProperty('--backgroundColor', "black");
+    root.style.setProperty('--backgroundColor', "0, 0, 0");
     root.style.setProperty('--divBackgroundColor', "#242424");
     wand.classList.add("active-wand");
   }, 10);
@@ -116,6 +116,32 @@ function decreaseTextSize() {
   const newSize = Math.max(currentSize - 0.1, 1.8);
   root.style.setProperty('--defaultTextSize', newSize);
 }
+
+
+let currentIndex = 0;
+let currentPicture = 1;
+const images = document.querySelectorAll('.sliderImages img');
+const totalImages = images.length;
+
+function showNextImage() {
+  document.getElementById("slider" + currentPicture).style.transform = `scale(100%)`
+
+  currentIndex++;
+  currentPicture++;
+  if (currentIndex >= totalImages) {
+    currentIndex = 0;
+    currentPicture = 1;
+  }
+  updateSliderPosition();
+}
+
+function updateSliderPosition() {
+  const newTransformValue = `calc(${-currentIndex * 100}% + ${-5 * currentIndex}vw)`;
+  document.querySelector('.sliderImages').style.transform = `translateX(${newTransformValue})`;
+  document.getElementById("slider" + currentPicture).style.transform = `scale(110%)`
+}
+
+setInterval(showNextImage, 3000); // Change image every 3 seconds
 
 // Add event listeners to the buttons
 document.querySelector('.text_increase').addEventListener('click', increaseTextSize);
@@ -258,6 +284,7 @@ function onPlayerReady(event) {
 }
 
 // show fullow up question
+/*
 function showFollowUp(radioId, followUpDivClass) {
   var followUpDiv = document.querySelector('.' + followUpDivClass);
   if (document.getElementById(radioId).checked) {
@@ -336,6 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   }
 });
+*/
 
 document.addEventListener("DOMContentLoaded", function() {
   // Get today's date
