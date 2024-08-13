@@ -8,48 +8,133 @@
 
 
 <url>
-  <loc>https://lsths.github.io/</loc>
-  <lastmod>2024-05-29T00:27:09+00:00</lastmod>
+  <loc>https://lsths-test.github.io/</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://lsths.github.io/about</loc>
-  <lastmod>2024-05-29T00:27:09+00:00</lastmod>
+  <loc>https://lsths-test.github.io/about</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://lsths.github.io/staff</loc>
-  <lastmod>2024-05-29T00:27:09+00:00</lastmod>
+  <loc>https://lsths-test.github.io/staff</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://lsths.github.io/students</loc>
-  <lastmod>2024-05-29T00:27:09+00:00</lastmod>
+  <loc>https://lsths-test.github.io/students</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://lsths.github.io/contact</loc>
-  <lastmod>2024-05-29T00:27:09+00:00</lastmod>
+  <loc>https://lsths-test.github.io/contact</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://lsths.github.io/index</loc>
-  <lastmod>2024-05-29T00:27:09+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://lsths.github.io/students/Grade_7/Mayumi(STE)/7-Mayumi</loc>
-  <lastmod>2024-05-29T00:27:09+00:00</lastmod>
+  <loc>https://lsths-test.github.io/students/Grade_7/Excellence(STE)/7-Excellence</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://lsths.github.io/students/Grade_8/Masunurin(STE)/8-Masunurin</loc>
-  <lastmod>2024-05-29T00:27:09+00:00</lastmod>
+  <loc>https://lsths-test.github.io/students/Grade_7/Resillence(STE)/7-Resillence</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://lsths.github.io/students/Grade_8/Masipag(STE)/8-Masipag</loc>
-  <lastmod>2024-05-29T00:27:09+00:00</lastmod>
+  <loc>https://lsths-test.github.io/students/Grade_7/Matipid/7-Matipid</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lsths-test.github.io/students/Grade_7/Malikhain/7-Malikhain</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lsths-test.github.io/students/Grade_7/Malambing/7-Malambing</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lsths-test.github.io/students/Grade_7/Magiliw/7-Magiliw</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lsths-test.github.io/students/Grade_7/Mabait/7-Mabait</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lsths-test.github.io/students/Grade_8/Hook(STE)/8-Hook</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lsths-test.github.io/students/Grade_8/Mendel(STE)/8-Mendel</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lsths-test.github.io/students/Grade_8/Masipag/8-Masipag</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lsths-test.github.io/students/Grade_8/Matiyaga/8-Matiyaga</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lsths-test.github.io/students/Grade_8/Masunurin/8-Masunurin</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lsths-test.github.io/students/Grade_8/Matulungin/8-Matulungin</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lsths-test.github.io/students/Grade_8/Mapagbigay/8-Mapagbigay</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lsths-test.github.io/students/Grade_9/Reliability(STE)/9-Reliability</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lsths-test.github.io/students/Grade_9/Humbleness(STE)/9-Humbleness</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lsths-test.github.io/students/Grade_9/Magalang/9-Magalang</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lsths-test.github.io/students/Grade_9/Mahusay/9-Mahusay</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lsths-test.github.io/students/Grade_9/Mapagpasensya/9-Mapagpasensya</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lsths-test.github.io/students/Grade_9/Masayahin/9-Masayahin</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lsths-test.github.io/students/Grade_9/Masinop/9-Masinop</loc>
+  <lastmod>2024-08-13T04:30:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
